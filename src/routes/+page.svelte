@@ -28,7 +28,7 @@
         console.log(peerId);
         status = "Calling...";
 
-        await navigator.mediaDevices.getDisplayMedia({
+        await navigator.mediaDevices.getUserMedia({
             audio: true,
             video: doVideo
         })
