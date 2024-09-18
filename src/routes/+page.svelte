@@ -58,7 +58,7 @@
             status = "In call";
         })
 
-        call.on('', () => {
+        call.on('close', () => {
             alert("Other side closed the call");
             location.reload()
         })
