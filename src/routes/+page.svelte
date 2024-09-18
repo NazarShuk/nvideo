@@ -28,7 +28,7 @@
         console.log(peerId);
         status = "Calling...";
 
-        await navigator.mediaDevices.getUserMedia({
+        await navigator.mediaDevices.getDisplayMedia({
             audio: true,
             video: doVideo
         })
@@ -58,10 +58,6 @@
             status = "In call";
         })
 
-        call.on('close', () => {
-            alert("Other side closed the call");
-            location.reload()
-        })
     }
 
     peer.on('call', async (call) => {
@@ -99,10 +95,6 @@
             status = "In call";
         })
 
-        call.on('close', () => {
-            alert("Other side closed the call");
-            location.reload()
-        })
     })
 
 </script>
